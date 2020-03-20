@@ -1,9 +1,13 @@
 import React from 'react';
 
-import { Wrapper } from './styles';
+import { Wrapper, Container } from './styles';
 
 export default function AuthLayout({ children }) {
     return (
-        <Wrapper>{children}</Wrapper>
+        <Wrapper>
+            <Container>
+                {children}
+            </Container>
+        </Wrapper>
     );
 }
