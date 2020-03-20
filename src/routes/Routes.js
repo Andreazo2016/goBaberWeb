@@ -1,8 +1,12 @@
-import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
-import AuthLayout from '~/pages/_layouts/auth'
-import DefaultLayout from '~/pages/_layouts/default'
+import AuthLayout from '~/pages/_layouts/auth';
+import DefaultLayout from '~/pages/_layouts/default';
+
+import store from '~/store';
+
+
 
 
 export default function RouteWrapper({
@@ -10,7 +14,12 @@ export default function RouteWrapper({
     isPrivate = false,
     ...rest
 }){
-    const signed = false;
+
+    /**
+     * Pega o valor da variavel  que ta dentro do reducer auth dentro de store
+     * 
+     */
+    const signed = store.getState().auth.signed;
 
     /**
      * 
