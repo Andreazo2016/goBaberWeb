@@ -15,8 +15,11 @@ export default createGlobalStyle`
     outline:0;
 }
 
-html,body,#root{
-    height:100%
+html{
+    height:100%;
+}
+#root{
+    height:100%;
 }
 
 body,input,button{
